@@ -7,7 +7,7 @@ public class Hinder extends Actor //Die Klasse Hinder hat Zugriff auf den Actor
         
         //Die Größe der einzelnen Hinder-Objekte werden in der MyWorld festgelegt
     }
-    public void act() //Die Methode public void act 
+    public void act() //Die Methode public void act wird definiert
     {
         //Der Hinder macht nichts aktiv im Spiel
     }

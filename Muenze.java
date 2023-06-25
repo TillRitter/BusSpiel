@@ -6,7 +6,7 @@ public class Muenze extends Actor //Die Klasse Münze hat Zugriff auf den Actor(
     
     int punkte;  //Die Variable punkte wird definiert
     public Muenze(){           //Der Konstruktor der Münze wird definiert
-        getImage().scale(30,30);  //Das Bild der Münze wird auf eine Größe von 30x30 Pixel festgelegt
+        getImage().scale(25,25);  //Das Bild der Münze wird auf eine Größe von 25x25 Pixel festgelegt
     }
     
     public void act() //Die Methode public void act wird definiert und ausgeführt

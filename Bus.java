@@ -4,7 +4,7 @@ public class Bus extends Actor //Die Klasse Bus hat auf den Actor Zugriff
 {
     MyWorld w;  //Ein Platz wird für die MyWorld freigestellt
     int punkte;  //Die Variable punkte wird ohne Wert definiert
-    public Bus(MyWorld w1){
+    public Bus(MyWorld w1){ //Der Konstruktor des Vans wird definiert und erwartet eine Verbindung zur MyWorld
         getImage().scale(60,60);  //Setzt das Bild des Busses auf 60x60 Pixel fest
         setRotation(90); //Dreht den Bus beim Erstellen der Landkarte um 90°
         w=w1;  //Die Verbindung zur MyWorld wird in w gespeichert
@@ -21,14 +21,16 @@ public class Bus extends Actor //Die Klasse Bus hat auf den Actor Zugriff
         if( Greenfoot.isKeyDown("a"))setRotation(getRotation()-2);  //Falls A gedrückt wird,dreht sich der Bus um -2°
         if( Greenfoot.isKeyDown("w")){  //Falls W gedrückt wird...
             if(isTouching(Hinder.class)){ //... und der Bus ein Objekt der Klasse Hinder berührt,dann...
-                setLocation(132,35);   //...wird der Bus an seinen Ursprung teleportiert
+                setLocation(132,35);   //...wird der Bus an seinen Ursprung teleportiert und...
+                punkte=punkte-1; //...verliert einen Punkt
             }else{
                 move(1);   //Falls er nichts berührt,bewegt der Bus sich 1 Pixel vorwärts
             }
         }
         if(Greenfoot.isKeyDown("s")){ //Falls S gedrückt wird...
             if(isTouching(Hinder.class)){ //und der Bus ein Objekt der Klasse Hinder berührt,dann...
-                setLocation(132,35);  //...wird der Bus an seinen Ursprung teleportiert
+                setLocation(132,35);  //...wird der Bus an seinen Ursprung teleportiert und...
+                punkte=punkte-1; //...verliert einen Punkt
             }else{
                 move(-1);  //Falls der Bus nichts berührt,bewegt er sich um 1 Pixel rückwärts
                 

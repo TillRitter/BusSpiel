@@ -10,6 +10,6 @@ public class Busschild extends Actor//Die Klasse Busschild hat Zugriff auf den A
     
     public void act()  //Die Methode public void act wird definiert
     {
-        
+         
     }
 }
